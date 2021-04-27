@@ -1,1 +1,1 @@
-Estudos relacionados a linguagem TypeScript.
+Estudos relacionados a linguagem TypeScript/Angular.
