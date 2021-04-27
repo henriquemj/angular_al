@@ -1,22 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+
 import { PhotoService } from './photos/photo/photo.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  photos: any[] = [];
+  photos: Object[] = [];
 
-  constructor (private photoService: PhotoService) { }
+  constructor(photoService: PhotoService) {
 
-  ngOnInit(): void {
-
-    this.photoService
+    photoService
       .listFromUser('flavio')
-      .subscribe(photos => this.photos = photos);  
+      .subscribe(photos => this.photos = photos);
   }
 }
