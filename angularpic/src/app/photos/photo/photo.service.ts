@@ -10,7 +10,7 @@ export class PhotoService {
     
     listFromUser(userName: string) {
        return this.http
-        .get<Object[]>(API + '/flavio/photos');
+        .get<any[]>(API + '/flavio/photos');
 
     }
 }
